@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elizabeth | Freelance Lighting</title>
+    <meta name="description" content="Elizabeth - Freelance Lighting Design and Services">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Canvas for interactive background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <div class="container">
+        <!-- Left Column: Image -->
+        <div class="image-column">
+            <img src="images/Elizabeth%20and%20Ghost.png" alt="Elizabeth Lighting Design">
+        </div>
+
+        <!-- Right Column: Content -->
+        <div class="content-column">
+            <div class="content-wrapper">
+                <header>
+                    <h1 class="hero-title">
+                        Illuminating<br>
+                        <span class="highlight" id="typing-text"></span><span class="typing-cursor">|</span>
+                    </h1>
+                </header>
+
+                <section class="description">
+                    <p>
+                        I craft dynamic, tailored lighting experiences that bring spaces to life.
+                        Whether it's an intimate setting or a grand production, every shadow and highlight is
+                        meticulously designed.
+                    </p>
+                </section>
+
+                <footer>
+                    <a href="#cv-section" class="cta-button">
+                        See my work
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="arrow-icon">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                    <p class="email-text">
+                        Send me an email: <a href="mailto:me@elizabeth.lighting">me@elizabeth.lighting</a>
+                    </p>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <!-- CV Section -->
+    <section id="cv-section" class="cv-section">
+        <div class="cv-container">
+            <!-- Left: Selected Events -->
+            <div class="cv-column events-column">
+                <h2>Selected Events</h2>
+                <ul class="events-list">
+                    <li>
+                        <span class="event-year">2025</span>
+                        <div class="event-details">
+                            <h3>Neon Dreams Festival</h3>
+                            <p>Lead Lighting Designer</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="event-year">2024</span>
+                        <div class="event-details">
+                            <h3>Echoes Contemporary Dance</h3>
+                            <p>Lighting Director</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="event-year">2023</span>
+                        <div class="event-details">
+                            <h3>Metropolis Fashion Week</h3>
+                            <p>Stage & Runway Lighting</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Right: Primary Skills -->
+            <div class="cv-column skills-column">
+                <h2>Primary Skills</h2>
+                <div class="skills-chart">
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span>Theatrical Lighting</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="bar-bg"><div class="bar-fill" style="width: 95%;"></div></div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span>Stage Design</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="bar-bg"><div class="bar-fill" style="width: 85%;"></div></div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span>Console Programming</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="bar-bg"><div class="bar-fill" style="width: 90%;"></div></div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span>Live Events</span>
+                            <span>100%</span>
+                        </div>
+                        <div class="bar-bg"><div class="bar-fill" style="width: 100%;"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,329 @@
+:root {
+    --bg-dark: #0f0814;
+    --bg-royal: #1b0e27;
+    --text-primary: #ffffff;
+    --text-secondary: #b5a2cc;
+    --accent: #9d50ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Interactive Background Canvas */
+#bg-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+/* Layout */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+/* Left Image Column */
+.image-column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+}
+
+.image-column img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+}
+
+/* Right Content Column */
+.content-column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+}
+
+.content-wrapper {
+    max-width: 600px;
+    width: 100%;
+}
+
+/* Typography & Content */
+.hero-title {
+    font-size: 4rem;
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
+}
+
+.hero-title .highlight {
+    font-weight: 600;
+    color: transparent;
+    background: linear-gradient(90deg, #fff, var(--accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.typing-cursor {
+    font-weight: 300;
+    color: var(--accent);
+    animation: blink 1s step-end infinite;
+    display: inline-block;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.description p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    font-weight: 300;
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    background: transparent;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 400;
+    border: 1px solid var(--accent);
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-button:hover {
+    background-color: var(--accent);
+    color: #fff;
+}
+
+.arrow-icon {
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover .arrow-icon {
+    transform: translateX(4px);
+}
+
+.email-text {
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    font-weight: 300;
+}
+
+.email-text a {
+    color: var(--text-primary);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 2px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.email-text a:hover {
+    color: var(--accent);
+    border-color: transparent;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .image-column {
+        padding: 2rem;
+    }
+
+    .content-column {
+        padding: 2rem;
+        align-items: flex-start;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .image-column {
+        padding: 2rem;
+        align-items: center;
+    }
+    
+    .image-column img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        aspect-ratio: 1/1;
+    }
+    
+    .content-column {
+        padding: 2rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .description p {
+        font-size: 1.1rem;
+    }
+}
+
+/* CV Section */
+.cv-section {
+    min-height: 100vh;
+    padding: 6rem 4rem;
+    background: var(--bg-royal);
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid rgba(157, 80, 255, 0.1);
+}
+
+.cv-container {
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.cv-column h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 3rem;
+    color: var(--text-primary);
+}
+
+/* Events List */
+.events-list {
+    list-style: none;
+    padding: 0;
+}
+
+.events-list li {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.events-list li:last-child {
+    border-bottom: none;
+}
+
+.event-year {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--accent);
+    min-width: 60px;
+}
+
+.event-details h3 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+.event-details p {
+    color: var(--text-secondary);
+    font-weight: 300;
+}
+
+/* Skills Chart */
+.skills-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+.bar-bg {
+    width: 100%;
+    height: 8px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent), #fff);
+    border-radius: 4px;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Animation trigger */
+.animate-bars .bar-fill {
+    transform: scaleX(1);
+}
+
+/* Responsive CV */
+@media (max-width: 992px) {
+    .cv-container {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 576px) {
+    .cv-section {
+        padding: 4rem 2rem;
+    }
+    .cv-column h2 {
+        font-size: 2rem;
+    }
+}
